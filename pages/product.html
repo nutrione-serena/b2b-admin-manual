@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상품관리 | 해외 B2B 관리자 매뉴얼</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Nutrione Global B2B 관리자 매뉴얼</div>
+    <a class="home-link" href="../index.html">← 전체 목록으로</a>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <span class="tag">02. 상품관리</span>
+      <h1>상품관리 화면 사용법</h1>
+      <p>
+        상품관리는 관리자가 직접 상품 속성을 새로 입력하는 화면이 아니라,
+        <b>ERP번호로 상품마스터 데이터를 검색·연동</b>한 뒤 해외 B2B 판매에
+        필요한 부가 정보(가격, MOQ, 노출 국가, 이미지 등)를 얹는 화면입니다.
+      </p>
+      <div class="meta">관리자 경로 : <a href="https://globaladm.nutrione.co.kr/item/item" target="_blank" rel="noopener">globaladm.nutrione.co.kr/item/item</a></div>
+    </div>
+
+    <div class="toc">
+      <b>이 페이지에서 확인할 내용</b>
+      <ol>
+        <li>목록에서 상세로 이동하는 방법</li>
+        <li>기본정보 — ERP번호 연동 방법</li>
+        <li>판매·전시 정보 — 고객에게 언제 보이는가</li>
+        <li>규격·무게 정보 — 등록 전 꼭 확인할 것</li>
+        <li>자주 하는 실수</li>
+      </ol>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <h2><span class="step-no">1</span> 상품 목록에서 상세로 이동</h2>
+      <p>좌측 메뉴 <b>상품 관리</b>에서 검색 후 <b>ERP번호를 클릭</b>하면 상세 화면으로 이동합니다. 신규 등록은 목록 상단의 <b>등록</b> 버튼을 누릅니다.
+      상세 화면은 <b>기본정보 / 판매·전시 정보 / 규격·무게 정보 / 이미지·상세 정보 / 변경이력</b> 5개 영역으로 구성되며, 상단 탭을 클릭하면 해당 영역으로 화면이 이동합니다.</p>
+      <div class="warn">
+        <b>주의.</b> 목록의 "제품명, 원료명" 검색창에 콤마(,)로 여러 단어를 넣으면 <b>입력한 단어를 모두 포함하는 상품만</b> 검색됩니다 (OR가 아닌 AND 조건).
+      </div>
+      <div class="tip">
+        <b>오픈 예정.</b> <b>이미지·상세 정보</b> 탭은 고객 사이트(front) 개발 이후에 사용되는 영역입니다. front가 아직 없는 현재는 관련 항목이 노출되지 않으며, front 오픈 이후 반영될 예정입니다.
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <h2><span class="step-no">2</span> 기본정보 — ERP번호는 검색으로만 연동</h2>
+
+      <div class="shot">
+        <img class="has-cap" src="../assets/img/product_basic.png" alt="상품 상세 - 기본정보, ERP번호 영역 강조">
+        <div class="cap">ERP번호는 표시만 되고 직접 입력란이 아닙니다 — 최초 등록 시 "검색" 버튼을 눌러 상품마스터에서 선택해야 합니다.</div>
+      </div>
+
+      <table>
+        <tr><th>ERP번호</th><td><b>직접 타이핑할 수 없고 "검색" 버튼으로만 등록 가능</b>합니다. 이미 등록된 ERP번호를 다시 등록하려 하면 "이미 등록된 상품입니다" 안내와 함께 등록이 막힙니다.</td></tr>
+        <tr><th>상품군 / 카테고리</th><td>ERP·브랜드 기준으로 자동 연동되어 표시됩니다 (뉴트리원 → K-HEALTH, 엠디스픽 → K-BEAUTY로 자동 매칭).</td></tr>
+        <tr><th>브랜드 / 상품명</th><td>상품마스터 정보가 기본으로 채워지며, 필요 시 수정할 수 있습니다. 다만 이 값은 <b>해외 B2B 화면에서만 단독으로 사용</b>되며 상품마스터 원본을 바꾸지 않습니다. <b>최초 등록 시 한 번만 연동</b>되고, 이후 상품마스터 값이 바뀌어도 이미 등록된 해외 B2B 쪽 값은 자동으로 따라가지 않습니다.</td></tr>
+      </table>
+
+      <div class="caution">
+        <b>가장 중요한 주의사항.</b> 기본정보·규격정보의 대부분 항목은 <b>"바코드번호 기준 상품마스터"에서 자동으로 가져온 값</b>입니다.
+        값을 수정하려면 이 화면에서 직접 고치는 것이 아니라, 상단 <b>"바코드 정보보기"</b> 버튼을 눌러 연동된 상품마스터로 이동해 <b>상품마스터에서 수정해야만 반영</b>됩니다.
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <h2><span class="step-no">3</span> 판매·전시 정보 — 고객에게 언제 보이는가</h2>
+      <p>이 영역의 설정에 따라 고객 사이트(front) 노출 여부와 관리자의 직접 주문 가능 여부가 달라집니다.</p>
+
+      <div class="shot">
+        <img class="has-cap" src="../assets/img/product_sale.png" alt="상품 상세 - 판매전시정보, MOQ와 운영제외국가 강조">
+        <div class="cap">기준 MOQ(주문단위)와 운영 제외 국가는 거래처의 견적·주문 가능 여부를 직접 좌우하는 항목입니다.</div>
+      </div>
+
+      <table>
+        <tr><th>판매상태</th><td>판매중 / 일시품절 / 판매중지 — 기본값 판매중</td></tr>
+        <tr><th>전시여부</th><td>전시 / 미전시 — 기본값 전시</td></tr>
+        <tr><th>기준 MOQ(주문단위)</th><td>거래처가 견적·주문 가능한 최소 단위. 거래처는 이 값의 배수로만 수량을 늘릴 수 있습니다.</td></tr>
+        <tr><th>운영 제외 국가</th><td>선택한 국가의 거래처는 이 상품을 사이트에서 아예 조회할 수 없고 견적·주문도 불가능해집니다.</td></tr>
+      </table>
+
+      <div class="tip">
+        <b>오픈 예정.</b> <b>기준 MOQ(주문단위), 운영 제외 국가, 전시여부</b>는 고객 사이트(front)가 있어야 실제로 동작하는 기능입니다. front가 아직 없는 현재는 값을 입력해도 실제로 사용(적용)되지 않으며, front 오픈 이후 반영될 예정입니다.
+      </div>
+
+      <div class="tip">
+        <b>노출 조건 정리</b><br>
+        · 고객 사이트(front) 노출 = 판매상태가 <b>판매중 또는 일시품절</b> + 전시여부가 <b>전시</b>일 때<br>
+        · 관리자가 직접 주문 등록 = 판매상태가 <b>판매중</b>일 때만 가능 (일시품절 상품은 관리자도 주문 등록 불가). <b>전시여부와는 무관</b>하게 주문할 수 있습니다.
+      </div>
+      <div class="warn">
+        <b>주의.</b> 거래처는 MOQ의 배수로만 주문할 수 있지만, <b>관리자가 대신 주문을 등록할 때는 MOQ와 무관하게 임의 수량을 입력</b>할 수 있습니다.
+        고객 문의 응대 시 이 차이를 혼동하지 않도록 주의하세요.
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step">
+      <h2><span class="step-no">4</span> 규격·무게 정보 — 등록 전 꼭 확인할 것</h2>
+      <p>규격·무게 정보는 <b>상품마스터 기준</b>으로 값이 채워지는 영역입니다. Gross weight·카톤입수·낱개규격은 상품마스터 값이 우선 사용되고, 없으면 WMS(창고관리시스템) 값을 대신 사용합니다.</p>
+
+      <div class="shot">
+        <img class="has-cap" src="../assets/img/product_spec.png" alt="상품 상세 - 규격무게정보, 표준 카톤 규격/CBM 강조">
+        <div class="cap">표준 카톤 부피(CBM)는 이 상품만 단독으로 표준 카톤에 포장했을 때 기준의 참고값입니다. 실제 출고 시 다른 상품과 혼합 포장되면 주문 상세에서 실측값으로 다시 계산됩니다.</div>
+      </div>
+
+      <div class="caution">
+        <b>주의.</b> 상품마스터·WMS에 규격 데이터가 없어도 <b>상품 등록·저장 자체는 됩니다.</b>
+        다만 규격 정보가 없으면 <b>실제 주문 시 출고 처리에 필요한 정보가 없어 문제가 발생</b>할 수 있습니다.
+        규격 정보가 비어 있는 상품은 상단 <b>"바코드 정보보기"</b> 버튼을 눌러 연동된 상품마스터로 이동해 <b>주문이 발생하기 전에 반드시 정보를 입력</b>해주세요.
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section-title">자주 하는 실수 체크리스트</div>
+    <div class="faq-box">
+      <div class="q">Q. ERP번호를 검색창에 직접 입력했는데 등록이 안 돼요.</div>
+      <div class="a">ERP번호는 텍스트 직접 입력이 불가능하며, 반드시 "검색" 버튼을 눌러 나오는 팝업에서 선택해야 합니다.</div>
+
+      <div class="q">Q. 규격 정보를 수정해서 저장했는데, 다음에 보니 원래대로 돌아가 있어요.</div>
+      <div class="a">브랜드/상품명을 제외한 기본정보·규격정보 대부분은 상품마스터에서 자동으로 가져오는 값이라 이 화면에서 직접 고쳐도 반영되지 않습니다. 상단 "바코드 정보보기" 버튼으로 이동해 상품마스터에서 값을 수정해주세요.</div>
+
+      <div class="q">Q. 판매상태를 "일시품절"로 바꿨더니 관리자 주문 등록이 안 돼요.</div>
+      <div class="a">정상 동작입니다. 관리자 주문 등록은 판매상태가 "판매중"인 상품만 가능합니다 (전시여부와는 무관).</div>
+
+      <div class="q">Q. 기준 MOQ나 운영 제외 국가를 설정했는데 아무 효과가 없어요.</div>
+      <div class="a">해당 기능은 고객 사이트(front)가 있어야 실제로 동작합니다. front가 아직 오픈되지 않은 현재는 값을 입력해도 적용되지 않으며, front 오픈 이후 정상 반영될 예정입니다.</div>
+
+      <div class="q">Q. 규격 정보가 없는 상품인데 등록이 그냥 됐어요. 문제 없는 건가요?</div>
+      <div class="a">등록·저장 자체는 규격 정보가 없어도 됩니다. 다만 그 상태로 주문이 발생하면 출고 처리에 필요한 정보가 없어 문제가 생길 수 있으니, 주문이 들어오기 전에 "바코드 정보보기" 버튼으로 상품마스터에 규격 정보를 꼭 입력해주세요.</div>
+    </div>
+
+    <div class="footer-nav">
+      <a href="partner.html">← 이전 : 거래처관리</a>
+      <a href="quote.html">다음 : 견적관리 →</a>
+    </div>
+  </div>
+</body>
+</html>

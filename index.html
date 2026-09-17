@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>해외 B2B 관리자 매뉴얼</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Nutrione Global B2B 관리자 매뉴얼</div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <span class="tag">운영 매뉴얼 · v1.0</span>
+      <h1>해외 B2B 관리자 사용 매뉴얼</h1>
+      <div class="meta">
+        관리자 접속 주소 : globaladm.nutrione.co.kr &nbsp;·&nbsp; 최종 업데이트 : 2026-09-16
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <b>📌 읽기 전에</b> — 이 매뉴얼은 실제 운영 중인 관리자 화면을 캡쳐하여 제작되었습니다.
+      화면에 보이는 거래처명·상품명·금액 등은 테스트 데이터이며, 실제 운영 데이터와 다를 수 있습니다.
+      메뉴 구성이나 정책은 추후 업데이트될 수 있으니, 최신 화면과 차이가 있다면 ICT개발부로 문의해주세요.
+    </div>
+
+    <div class="section-title">전체 업무 흐름</div>
+    <div class="step">
+      <p>4개 메뉴는 아래와 같은 하나의 흐름으로 이어집니다. 거래처를 먼저 등록하고, 판매할 상품을 등록한 뒤, 거래처의 견적을 승인하면 주문으로 확정되어 출고까지 진행됩니다.</p>
+      <div class="flow">
+        <span class="node">거래처 등록</span><span class="arrow">→</span>
+        <span class="node">상품 등록</span><span class="arrow">→</span>
+        <span class="node">견적 접수 · 승인</span><span class="arrow">→</span>
+        <span class="node">주문확정</span><span class="arrow">→</span>
+        <span class="node">출고준비중</span><span class="arrow">→</span>
+        <span class="node now">출고완료</span>
+      </div>
+
+      <h4 style="margin-top:28px;">상세 흐름도</h4>
+      <p style="font-size:13.5px;color:#666;">거래처(FO) 사이트 이용 과정까지 포함한 상세 흐름도입니다.
+        <b>고객이 이용하는 해외 B2B 사이트(FO) 개발이 모두 완료된 이후를 기준</b>으로 작성되어 있어,
+        현재 시점의 화면·기능과는 차이가 있을 수 있습니다.</p>
+      <div class="shot">
+        <img src="assets/img/flow_detail.png" alt="해외 B2B 견적/주문 상세 처리 흐름도 (FO 개발 완료 기준)" style="width:100%;height:auto;">
+      </div>
+      <p style="font-size:13.5px;color:#666;">위쪽(흰 배경)은 거래처가 사이트에서 직접 진행하는 절차이고, 아래쪽(회색 배경)은 관리자가 처리하는 절차입니다.</p>
+    </div>
+
+    <div class="section-title">메뉴 선택</div>
+    <div class="card-grid">
+
+      <a class="menu-card" href="pages/partner.html">
+        <span class="arrow">›</span>
+        <div class="idx">01</div>
+        <h3>거래처관리</h3>
+        <p>해외 B2B 사이트를 이용하는 거래처(고객사)의 기본정보·주문내역·문의내역을 조회하고 관리합니다.</p>
+        <div class="steps"><span>거래처 목록</span><span>거래처 등록</span><span>주문내역</span><span>문의내역</span></div>
+      </a>
+
+      <a class="menu-card" href="pages/product.html">
+        <span class="arrow">›</span>
+        <div class="idx">02</div>
+        <h3>상품관리</h3>
+        <p>ERP/상품마스터 정보를 연동하여 해외 B2B 사이트에 노출할 상품을 등록하고, 판매상태·가격·규격 정보를 관리합니다.</p>
+        <div class="steps"><span>목록 조회</span><span>상품 등록</span><span>판매·전시 정보</span><span>규격·무게 정보</span></div>
+      </a>
+
+      <a class="menu-card" href="pages/quote.html">
+        <span class="arrow">›</span>
+        <div class="idx">03</div>
+        <h3>견적관리 (견적 승인/반려)</h3>
+        <p>거래처가 접수했거나 관리자가 직접 등록한 견적 건을 검토하여 승인·거절하고, 승인된 건은 주문으로 확정합니다.</p>
+        <div class="steps"><span>견적 접수</span><span>관리자 검토</span><span>거래처 검토</span><span>주문확정 / 거절</span></div>
+      </a>
+
+      <a class="menu-card" href="pages/order.html">
+        <span class="arrow">›</span>
+        <div class="idx">04</div>
+        <h3>주문관리</h3>
+        <p>확정된 주문의 출고·운송 정보를 입력하고, 발주·서류 생성부터 출고 완료까지 전체 진행 상태를 관리합니다.</p>
+        <div class="steps"><span>주문확정</span><span>출고준비중</span><span>발주</span><span>출고완료</span></div>
+      </a>
+
+    </div>
+
+    <div class="section-title">공통 안내</div>
+    <div class="tip">
+      <b>Tip.</b> 각 화면에는 붉은 글씨의 <b>※ 안내문구</b>가 함께 표시됩니다. 이는 실수를 방지하기 위한
+      시스템 안내이므로, 값을 입력하기 전에 반드시 함께 확인해주세요.
+    </div>
+    <div class="warn">
+      <b>주의.</b> 견적·주문 관련 버튼(관리자거절 / 거래처거절 / 주문취소 등)은 한 번 처리하면
+      되돌릴 수 없는 경우가 많습니다. 클릭 전 거래처명·품목·수량을 다시 한번 확인해주세요.
+    </div>
+
+  </div>
+</body>
+</html>
