@@ -38,7 +38,7 @@ $today = Get-Date -Format 'yyyy-MM-dd'
 $indexPath = Join-Path $PSScriptRoot 'index.html'
 if (Test-Path $indexPath) {
     $content = Get-Content -Raw -Encoding UTF8 $indexPath
-    $updated = $content -replace '(최종\s*업데이트\s*:\s*)\d{4}-\d{2}-\d{2}', "`$1$today"
+    $updated = $content -replace '(최종\s*업데이트\s*:\s*)\d{4}-\d{2}-\d{2}', ('${1}' + $today)
     if ($updated -ne $content) {
         [System.IO.File]::WriteAllText($indexPath, $updated, (New-Object System.Text.UTF8Encoding($false)))
         git add -- $indexPath | Out-Null
