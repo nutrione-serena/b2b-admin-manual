@@ -63,6 +63,8 @@ img { max-width: 100%; border: 1px solid var(--line); border-radius: 6px; displa
 .hero .meta a { color: #7be0cb; text-decoration: underline; }
 .hero .meta a:hover { color: #fff; }
 
+.reveal-after { display: none; }
+
 .section-title {
   font-size: 13px; font-weight: 700; color: var(--brand-dark);
   text-transform: uppercase; letter-spacing: .5px; margin: 36px 0 12px;
