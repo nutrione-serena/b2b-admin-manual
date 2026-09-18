@@ -4,7 +4,7 @@
 
   if (new Date() >= REVEAL_AT) {
     document.querySelectorAll('.reveal-after').forEach(function (el) {
-      el.style.display = '';
+      el.classList.remove('reveal-after');
     });
   }
 })();
