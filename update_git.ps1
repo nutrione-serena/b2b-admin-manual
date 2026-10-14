@@ -47,6 +47,24 @@ if (Test-Path $indexPath) {
     }
 }
 
+# Version bump: ask whether this change is a feature change (vs. a simple wording fix).
+# Feature change -> minor version up (v1.0 -> v1.1). Wording-only -> version unchanged.
+if (Test-Path $indexPath) {
+    $verAns = Read-Host "Feature change? Bump version (y/N)"
+    if ($verAns -match '^[yY]') {
+        $content = Get-Content -Raw -Encoding UTF8 $indexPath
+        $m = [regex]::Match($content, 'v(\d+)\.(\d+)')
+        if ($m.Success) {
+            $newVer = 'v' + $m.Groups[1].Value + '.' + ([int]$m.Groups[2].Value + 1)
+            $updated = $content.Substring(0, $m.Index) + $newVer + $content.Substring($m.Index + $m.Length)
+            [System.IO.File]::WriteAllText($indexPath, $updated, (New-Object System.Text.UTF8Encoding($false)))
+            git add -- $indexPath | Out-Null
+            Write-Host "Version bumped: $($m.Value) -> $newVer"
+            Write-Host ""
+        }
+    }
+}
+
 $commitmsg = Read-Host "Commit message (press Enter for default)"
 if ([string]::IsNullOrWhiteSpace($commitmsg)) {
     $commitmsg = "Update manual $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
